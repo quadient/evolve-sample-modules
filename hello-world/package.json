@@ -1,7 +1,7 @@
 {
   "name": "hello-world",
   "displayName": "Hello World",
-  "description": "A simple hello world example.",
+  "description": "A simple example that logs a 'Hello World.' message.",
   "fromVersion": "24.10.1.1",
   "toVersion": null,
   "private": true

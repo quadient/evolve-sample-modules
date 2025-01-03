@@ -1,6 +1,6 @@
 export function getDescription() {
     return {
-        description: "Rsa Sign.",
+        description: "RSA Sign.",
         input: [
             {
                 id: "fileToSign",
@@ -12,22 +12,22 @@ export function getDescription() {
             {
                 id: "privateCertificate",
                 displayName: "Private Certificate",
-                description: "Private Certificate.",
+                description: "Private certificate used for signing.",
                 type: "Certificate",
                 required: true,
             },
             {
                 id: "rsaAlgorithmName",
-                displayName: "Rsa Algorithm Name (RSASSA-PKCS1-v1_5, RSA-PSS)",
-                description: "Rsa Algorithm Name (RSASSA-PKCS1-v1_5, RSA-PSS).",
+                displayName: "RSA algorithm name (RSASSA-PKCS1-v1_5, RSA-PSS)",
+                description: "Name of the RSA algorithm (RSASSA-PKCS1-v1_5, RSA-PSS).",
                 type: "String",
                 defaultValue: "RSASSA-PKCS1-v1_5",
                 required: true,
             },
             {
                 id: "rsaHashAlgorithmName",
-                displayName: "Rsa Hash Algorithm Name (SHA-1, SHA-256, SHA-384, SHA-512)",
-                description: "Rsa Hash Algorithm Name (SHA-1, SHA-256, SHA-384, SHA-512).",
+                displayName: "RSA hash algorithm name (SHA-1, SHA-256, SHA-384, SHA-512)",
+                description: "Name of the RSA hash algorithm  (SHA-1, SHA-256, SHA-384, SHA-512).",
                 type: "String",
                 defaultValue: "SHA-256",
                 required: true,
@@ -35,7 +35,7 @@ export function getDescription() {
             {
                 id: "fileSignature",
                 displayName: "Output file signature",
-                description: "Contains the created signature (type Connector used because this files is written and read in this example).",
+                description: "Contains the created signature (type Connector is used because this files is written and read in this example).",
                 type: "OutputResource",
                 required: true,
             },

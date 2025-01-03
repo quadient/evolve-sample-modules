@@ -1,11 +1,11 @@
 export function getDescription() {
     return {
-        description: "Generates a mac signed link.",
+        description: "Generates a MAC signed link.",
         input: [
             {
                 id: "baseUrl",
-                displayName: "Base url",
-                description: "Base url for the third party.",
+                displayName: "Base URL",
+                description: "Base URL for the third party.",
                 type: "String",
                 required: true,
             },
@@ -21,8 +21,8 @@ export function getDescription() {
             {
                 id: "signedUrl",
                 type: "String",
-                displayName: "Signed url",
-                description: "Signed url.",
+                displayName: "Signed URL",
+                description: "Signed URL.",
             },
         ],
     } as const satisfies ScriptDescription;

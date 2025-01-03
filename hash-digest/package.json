@@ -1,7 +1,7 @@
 {
   "name": "hash-digest",
-  "displayName": "Hash Digest operation",
-  "description": "Using hash digest to create mac-like string signature.",
+  "displayName": "Hash digest operation",
+  "description": "Using hash digest to create a MAC-like string signature.",
   "fromVersion": "24.10.1.1",
   "toVersion": null,
   "private": true

@@ -1,7 +1,7 @@
 export function getDescription(): ScriptDescription {
     return {
         displayName: "Resource Copy",
-        description: "Copies input resource into output resource.",
+        description: "Copies an input resource into an output resource.",
         category: "Utilities",
         input: [
             {

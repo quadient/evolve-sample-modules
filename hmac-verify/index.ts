@@ -1,6 +1,6 @@
 export function getDescription() {
     return {
-        description: "Hmac Sign and Verify.",
+        description: "HMAC Sign and Verify.",
         input: [
             {
                 id: "fileToSign",
@@ -12,14 +12,14 @@ export function getDescription() {
             {
                 id: "cryptoSecretParameter",
                 displayName: "CryptoSecret Parameter",
-                description: "CryptoSecret parameter used as an Hmac secret.",
+                description: "CryptoSecret parameter used as an HMAC secret.",
                 type: "CryptoSecret",
                 required: true,
             },
             {
                 id: "hmacHashAlgorithmName",
-                displayName: "Hmac Hash Algorithm Name (SHA-1, SHA-256, SHA-384, SHA-512)",
-                description: "Hmac Hash Algorithm Name (SHA-1, SHA-256, SHA-384, SHA-512).",
+                displayName: "HMAC hash algorithm name (SHA-1, SHA-256, SHA-384, SHA-512)",
+                description: "Name of the HMAC hash algorithm (SHA-1, SHA-256, SHA-384, SHA-512).",
                 type: "String",
                 defaultValue: "SHA-256",
                 required: true,
@@ -37,7 +37,7 @@ export function getDescription() {
                 id: "isVerified",
                 type: "String",
                 displayName: "Is verified",
-                description: "Is verified.",
+                description: "Specifies whether the file is verified or not.",
             },
         ],
     } as const satisfies ScriptDescription;
