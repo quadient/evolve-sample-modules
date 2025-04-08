@@ -57,9 +57,15 @@ export async function execute(context: Context): Promise<Output> {
 }
 
 async function verifyContent(context: Context, signatureBytes: Uint8Array, contentBytes: SecureByteArray): Promise<boolean> {
-    const algorithmParams = { name: "HMAC", hash: context.parameters.hmacHashAlgorithmName };
-    const keyUse = ["verify"];
-    const publicKey = await crypto.subtle.importKey("cryptosecret", context.parameters.cryptoSecretParameter, algorithmParams, false, keyUse);
+    const algorithmParams: HmacImportParams = { name: "HMAC", hash: context.parameters.hmacHashAlgorithmName };
+    const keyUse: KeyUsage[] = ["verify"];
+    const publicKey = await crypto.subtle.importKey(
+        "cryptosecret",
+        context.parameters.cryptoSecretParameter,
+        algorithmParams,
+        false,
+        keyUse
+    );
 
     return await crypto.subtle.verify("HMAC", publicKey, signatureBytes, contentBytes);
 }

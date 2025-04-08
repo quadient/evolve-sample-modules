@@ -51,9 +51,15 @@ export async function execute(context: Context): Promise<Output> {
 }
 
 async function signContent(context: Context, fileToSign: IFile): Promise<ArrayBuffer> {
-    const algorithmParams = { name: context.parameters.rsaAlgorithmName, hash: context.parameters.rsaHashAlgorithmName };
-    const keyUse = ["sign"];
-    const privateKey = await crypto.subtle.importKey("pkcs8fromparameterinput", context.parameters.privateCertificate, algorithmParams, false, keyUse);
+    const algorithmParams: RsaHashedImportParams = { name: context.parameters.rsaAlgorithmName, hash: context.parameters.rsaHashAlgorithmName };
+    const keyUse: KeyUsage[] = ["sign"];
+    const privateKey = await crypto.subtle.importKey(
+        "pkcs8fromparameterinput",
+        context.parameters.privateCertificate,
+        algorithmParams,
+        false,
+        keyUse
+    );
 
     return await crypto.subtle.sign(context.parameters.rsaAlgorithmName, privateKey, fileToSign);
 }

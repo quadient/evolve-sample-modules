@@ -1,4 +1,4 @@
-export function getDescription(): ScriptDescription {
+export function getDescription() {
     return {
         displayName: "Multiple Resource Copy",
         description: "Copies multiple resources into a target directory. It has no size limit; the amount of transferred data is only limited by the step timeout.",
@@ -80,7 +80,7 @@ export function getDescription(): ScriptDescription {
                 description: "Number of files that failed to be copied.",
             },
         ],
-    };
+    } as const satisfies ScriptDescription;
 }
 
 export async function execute(context: Context): Promise<Output | void> {

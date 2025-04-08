@@ -1,4 +1,4 @@
-export function getDescription(): ScriptDescription {
+export function getDescription() {
     return {
         displayName: "Resource Copy",
         description: "Copies an input resource into an output resource.",
@@ -33,7 +33,7 @@ export function getDescription(): ScriptDescription {
             },
         ],
         output: [],
-    };
+    } as const satisfies ScriptDescription;
 }
 
 export async function execute(context: Context): Promise<Output | void> {

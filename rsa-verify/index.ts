@@ -64,9 +64,15 @@ export async function execute(context: Context): Promise<Output> {
 }
 
 async function verifyContent(context: Context, signatureBytes: Uint8Array, fileToVerify: IFile): Promise<boolean> {
-    const algorithmParams = { name: context.parameters.rsaAlgorithmName, hash: context.parameters.rsaHashAlgorithmName };
-    const keyUse = ["verify"];
-    const publicKey = await crypto.subtle.importKey("spkifromparameterinput", context.parameters.publicCertificate, algorithmParams, false, keyUse);
+    const algorithmParams: RsaHashedImportParams = { name: context.parameters.rsaAlgorithmName, hash: context.parameters.rsaHashAlgorithmName };
+    const keyUse: KeyUsage[] = ["verify"];
+    const publicKey = await crypto.subtle.importKey(
+        "spkifromparameterinput",
+        context.parameters.publicCertificate,
+        algorithmParams,
+        false,
+        keyUse
+    );
 
     return await crypto.subtle.verify(context.parameters.rsaAlgorithmName, publicKey, signatureBytes, fileToVerify);
 }
