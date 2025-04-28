@@ -1,0 +1,8 @@
+{
+  "name": "http-caller-get",
+  "displayName": "HTTP Caller - GET request",
+  "description": "Provides an example of a GET request. Requires a Web endpoint type connector. WARNING: you have to either read the response body or close the connection because of the limitation of 6 outbound connections.",
+  "fromVersion": "23.08",
+  "toVersion": null,
+  "private": true
+}
