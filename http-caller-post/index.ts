@@ -13,7 +13,7 @@ export function getDescription() {
                 displayName: "Body",
                 description: "Body to send to the endpoint",
                 type: "String",
-            }
+            },
         ],
         output: [],
     } as const satisfies ScriptDescription;
