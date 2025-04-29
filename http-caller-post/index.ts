@@ -12,8 +12,8 @@ export function getDescription() {
                 id: "body",
                 displayName: "Body",
                 description: "Body to send to the endpoint",
-                type: "String", 
-            }
+                type: "String",
+            },
         ],
         output: [],
     } as const satisfies ScriptDescription;

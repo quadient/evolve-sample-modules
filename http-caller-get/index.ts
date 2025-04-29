@@ -16,5 +16,6 @@ export function getDescription() {
 export async function execute(context): Promise<Output> {
     const requestEndpoint = context.parameters.get;
     const response = await fetch(requestEndpoint);
-    console.debug(response.json());
+    const responseJson = await response.json();
+    console.debug(responseJson);
 }
