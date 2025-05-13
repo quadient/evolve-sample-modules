@@ -1,0 +1,8 @@
+{
+  "name": "xslt-conversion",
+  "displayName": "XSLT conversion",
+  "description": "Converts a XSLT template and an XML file into a single file.",
+  "fromVersion": "24.10.1.1",
+  "toVersion": null,
+  "private": true
+}
