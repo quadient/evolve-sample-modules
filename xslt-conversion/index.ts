@@ -27,12 +27,12 @@ export function getDescription() {
         output: [],
     } as const satisfies ScriptDescription;
 }
-    
+
 export async function execute(context: Context): Promise<Output> {
     const templatePath = context.parameters.template as string;
     const xmlPath = context.parameters.xml as string;
     const resultPath = context.parameters.result as string;
-   
+
     console.log(`Reading XSLT template from: ${templatePath}`);
     const templateFile = context.getFile(templatePath);
     const templateContent = await templateFile.read();
@@ -43,14 +43,10 @@ export async function execute(context: Context): Promise<Output> {
 
     console.log("Applying XSLT transformation.");
     const transformedContent = runtime.xmlUtils.applyTemplate(xmlContent, templateContent);
-  
+
     console.log(`Writing result to: ${resultPath}`);
     const resultFile = context.getFile(resultPath);
     await resultFile.write(transformedContent);
 
     console.log("Transformation completed successfully.");
 }
-
-
- 
-   
