@@ -19,10 +19,8 @@ export function getDescription() {
             },
             {
                 id: "symmetricAlgorithmName",
-                displayName:
-                    "Symmetric algorithm name (Idea, TripleDes, Cast5, Blowfish, Des, Aes128, Aes192, Aes256, Twofish, Camellia128, Camellia192, Camellia256)",
-                description:
-                    "Name of the RSA hash algorithm  (Idea, TripleDes, Cast5, Blowfish, Des, Aes128, Aes192, Aes256, Twofish, Camellia128, Camellia192, Camellia256).",
+                displayName: "Symmetric algorithm name (Idea, TripleDes, Cast5, Blowfish, Des, Aes128, Aes192, Aes256, Twofish, Camellia128, Camellia192, Camellia256)",
+                description: "Name of the RSA hash algorithm  (Idea, TripleDes, Cast5, Blowfish, Des, Aes128, Aes192, Aes256, Twofish, Camellia128, Camellia192, Camellia256).",
                 type: "String",
                 defaultValue: "Aes256",
                 required: true,
