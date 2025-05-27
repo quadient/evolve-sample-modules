@@ -1,0 +1,8 @@
+{
+  "name": "pgp-decrypt",
+  "displayName": "PGP Decrypt operation",
+  "description": "Decrypts a file using PGP.",
+  "fromVersion": "25.06.1.1",
+  "toVersion": null,
+  "private": true
+}

@@ -1,0 +1,8 @@
+{
+  "name": "rsa-decrypt",
+  "displayName": "RSA Decrypt operation",
+  "description": "Decrypts a file using RSA.",
+  "fromVersion": "25.06.1.1",
+  "toVersion": null,
+  "private": true
+}
