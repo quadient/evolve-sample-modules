@@ -54,14 +54,19 @@ export async function execute(context: Context): Promise<Output> {
 
 async function importPrivateKey(context: Context): Promise<CryptoKey> {
     const algorithmParams: RsaOaepParams = { name: "RSA-OAEP", hash: context.parameters.rsaHashAlgorithmName };
-    const keyUse = ["decrypt"];
+    const keyUse: KeyUsage = ["decrypt"];
 
-    return await crypto.subtle.importKey("pkcs8fromparameterinput", context.parameters.certificate, algorithmParams, false, keyUse);
+    return await crypto.subtle.importKey("pkcs8fromparameterinput", context.parameters.privateCertificate, algorithmParams, false, keyUse);
 }
 
-async function checkDecrypted(decryptedFile: File): Promise<void> {
+async function checkDecrypted(decryptedFile: IFile): Promise<void> {
     const decryptedData = await decryptedFile.read();
     const expectedData = "this will be encrypted"; // This is the original data used in the encryption example
 
-    console.log(`Decrypted data: '${decryptedData}' is the same as the original data: '${expectedData}' -> '${decryptedData === expectedData}'`);
+    console.log(
+        `Decrypted data: '${decryptedData}' is the same as the original data: '${expectedData}' -> '${decryptedData === expectedData}'`
+    );
+    if (decryptedData !== expectedData) {
+        throw new Error("Decrypted data does not match the original data.");
+    }
 }
