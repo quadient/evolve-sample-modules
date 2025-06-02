@@ -56,7 +56,7 @@ export async function execute(context: Context): Promise<Output> {
 async function importPublicKey(context: Context): Promise<CryptoKey> {
     const algorithmParams: PgpParams = {
         name: "PGP",
-        symmetricKeyAlgorithm: context.parameters.symmetricAlgorithmName,
+        symmetricKeyAlgorithm: context.parameters.symmetricAlgorithmName as PgpSymmetricKeyAlgorithm,
         enableArmor: false,
         enableIntegrityCheck: true,
         compressionAlgorithm: "zlib",
