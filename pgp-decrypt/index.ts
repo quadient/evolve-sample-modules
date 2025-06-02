@@ -55,9 +55,7 @@ async function checkDecrypted(decryptedFile: IFile): Promise<void> {
     const decryptedData = await decryptedFile.read();
     const expectedData = "this will be encrypted"; // This is the original data used in the encryption example
 
-    console.log(
-        `Decrypted data: '${decryptedData}' is the same as the original data: '${expectedData}' -> '${decryptedData === expectedData}'`
-    );
+    console.log(`Decrypted data: '${decryptedData}' is the same as the original data: '${expectedData}' -> '${decryptedData === expectedData}'`);
     if (decryptedData !== expectedData) {
         throw new Error("Decrypted data does not match the original data.");
     }
