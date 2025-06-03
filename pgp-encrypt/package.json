@@ -1,0 +1,8 @@
+{
+  "name": "pgp-encrypt",
+  "displayName": "PGP Encrypt operation",
+  "description": "Encrypts a data using PGP.",
+  "fromVersion": "25.06.1.1",
+  "toVersion": null,
+  "private": true
+}
