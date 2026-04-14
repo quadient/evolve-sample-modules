@@ -1,15 +1,13 @@
 export function getDescription(): ScriptDescription {
     return {
         displayName: "File Upload",
-        description:
-            "Uploads a file using a specified web endpoint connector. The script will send a POST multipart request to the web endpoint connector.",
+        description: "Uploads a file using a specified web endpoint connector. The script will send a POST multipart request to the web endpoint connector.",
         category: "Integration",
         input: [
             {
                 id: "connector",
                 displayName: "Web endpoint connector",
-                description:
-                    "Must be a web endpoint connector pointing to an API which supports POST multipart requests. You can also append the connector with a relative path.",
+                description: "Must be a web endpoint connector pointing to an API which supports POST multipart requests. You can also append the connector with a relative path.",
                 type: "Connector",
                 required: true,
             },
