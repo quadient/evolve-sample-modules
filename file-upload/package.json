@@ -1,0 +1,8 @@
+{
+    "name": "file-upload",
+    "displayName": "File upload",
+    "description": "Uploads file to web endpoint using POST multipart request.",
+    "fromVersion": "24.10.1.1",
+    "toVersion": null,
+    "private": true
+}
